@@ -1,4 +1,4 @@
-# CSC209H1 F - Assignment 4: Web Server Application
+# Web Server Application
 
 This project is part of the CSC209H1 F course at the University of Toronto, focusing on system-level programming. The assignment involves building a basic web server that allows users to run image filters on custom images using a web browser.
 
