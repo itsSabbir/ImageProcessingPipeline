@@ -1,0 +1,52 @@
+<html>
+<head>
+  <title>Hello World</title>
+  <meta charset="UTF-8">
+</head>
+<body>
+<h1>CSC209: Image Filter Server</h1>
+<p>
+  If you're seeing this webpage, then you're on the right track!
+</p>
+
+<h2>Run image filter</h2>
+<form id="image-form" action="/image-filter" method="get">
+  <div>
+    <label for="image">Select an image</label>
+    <select name="image" id="image">
+    </select><br />
+    <label for="filter">Select a filter</label>
+    <select name="filter">
+      <option value="copy">copy</option>
+      <option value="greyscale">greyscale</option>
+      <option value="gaussian_blur">gaussian_blur</option>
+      <option value="edge_detection">edge_detection</option>
+    </select>
+  </div>
+  <div>
+    <button type="submit">Run filter</button>
+  </div>
+</form>
+
+<h2>Upload a new image</h2>
+<form id="image-form" action="/image-upload" method="post" enctype="multipart/form-data">
+  <div>
+    <input name="bitmap" type="file">
+  </div>
+  <div>
+    <button type="submit">Upload</button>
+  </div>
+</form>
+
+
+<script>
+var image = document.getElementById('image');
+
+for (var i = 0; i < filenames.length; i++) {
+  var option = document.createElement('option');
+  option.text = filenames[i];
+  image.add(option);
+}
+</script>
+</body>
+</html>
